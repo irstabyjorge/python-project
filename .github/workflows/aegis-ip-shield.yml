@@ -46,17 +46,17 @@ jobs:
           tree = git("rev-parse", f"{head}^{{tree}}").decode().strip()
           raw = git("ls-tree", "-r", "-z", head)
           entries = []
-          for item in raw.split(b"\\0"):
+          for item in raw.split(b"\0"):
               if not item:
                   continue
-              meta, raw_path = item.split(b"\\t", 1)
+              meta, raw_path = item.split(b"\t", 1)
               mode, kind, oid = meta.decode().split(" ", 2)
               if kind == "blob":
                   entries.append((raw_path.decode("utf-8", "surrogateescape"), mode, oid))
           entries = entries[:25000]
 
           p = subprocess.Popen(["git", "cat-file", "--batch"], stdin=subprocess.PIPE, stdout=subprocess.PIPE)
-          p.stdin.write(b"".join(oid.encode() + b"\\n" for _, _, oid in entries))
+          p.stdin.write(b"".join(oid.encode() + b"\n" for _, _, oid in entries))
           p.stdin.close()
           files = []
           for path, mode, oid in entries:
@@ -71,7 +71,7 @@ jobs:
                       raise RuntimeError("Truncated Git object")
                   digest.update(chunk)
                   remaining -= len(chunk)
-              if p.stdout.read(1) != b"\\n":
+              if p.stdout.read(1) != b"\n":
                   raise RuntimeError("Malformed Git object boundary")
               files.append({"path": path, "mode": mode, "git_blob_oid": oid, "sha256": digest.hexdigest()})
           if p.wait() != 0:
@@ -80,7 +80,7 @@ jobs:
           log = git("log", "-n500", "--format=%H%x09%an%x09%ae%x09%aI%x09%s", head).decode("utf-8", "replace")
           commits = []
           for line in log.splitlines():
-              parts = line.split("\\t", 4)
+              parts = line.split("\t", 4)
               if len(parts) == 5:
                   sha, name, email, authored, subject = parts
                   commits.append({"sha": sha, "author_name_declared": name,
@@ -97,7 +97,7 @@ jobs:
             "commit": head, "tree": tree,
             "workflow_run_id": os.environ["GITHUB_RUN_ID"],
             "workflow_run_attempt": os.environ["GITHUB_RUN_ATTEMPT"],
-            "file_count_recorded": len(files), "file_inventory_truncated_at_25000": len(raw.split(b"\\0")) - 1 > len(files),
+            "file_count_recorded": len(files), "file_inventory_truncated_at_25000": len(raw.split(b"\0")) - 1 > len(files),
             "files": files, "commits": commits,
             "limits": [
               "Git author and timestamp fields are declared metadata, not verified identity or trusted time.",
@@ -110,10 +110,10 @@ jobs:
             ]
           }
           out = Path(os.environ["RUNNER_TEMP"]) / "ip-shield-report.json"
-          encoded = (json.dumps(report, indent=2, ensure_ascii=False, sort_keys=True) + "\\n").encode()
+          encoded = (json.dumps(report, indent=2, ensure_ascii=False, sort_keys=True) + "\n").encode()
           out.write_bytes(encoded)
           checksum = hashlib.sha256(encoded).hexdigest()
-          out.with_suffix(".json.sha256").write_text(f"{checksum}  {out.name}\\n")
+          out.with_suffix(".json.sha256").write_text(f"{checksum}  {out.name}\n")
           print(f"IP SHIELD recorded {len(files)} tracked-file fingerprints at {head}")
 
       - name: Upload provenance artifact
