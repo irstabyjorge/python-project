@@ -1,0 +1,150 @@
+{
+  "commit": "a52b1b3a4b0970b3d3da077e80d3221e05182453",
+  "commits": [
+    {
+      "author_email_sha256": "2ec9846aa81c35983fbe8f05ca33e064fdac37cd1a375bb7a60646bcb0575826",
+      "author_name_declared": "JORGE FRANCISCO PAREDES",
+      "authored_at_declared": "2026-11-13T10:59:30-08:00",
+      "sha": "a52b1b3a4b0970b3d3da077e80d3221e05182453",
+      "subject": "Install AEGIS GitHub IP SHIELD provenance workflow (#1)"
+    },
+    {
+      "author_email_sha256": "b9f40e8d6f0729efba8325f20571cf487c63439f09478ee64cea55ea7c1c5a8d",
+      "author_name_declared": "Akash Morwal",
+      "authored_at_declared": "2023-03-18T10:13:04+05:30",
+      "sha": "733f83aebde0b3ba649bc541fdaffc4030bcaf65",
+      "subject": "Kivi python virtual Assistance"
+    },
+    {
+      "author_email_sha256": "b9f40e8d6f0729efba8325f20571cf487c63439f09478ee64cea55ea7c1c5a8d",
+      "author_name_declared": "Akash Morwal",
+      "authored_at_declared": "2023-03-18T10:11:32+05:30",
+      "sha": "9e0714539c08b144c5d670cd716c3a0c8f83838b",
+      "subject": "Initial commit"
+    }
+  ],
+  "file_count_recorded": 17,
+  "file_inventory_truncated_at_25000": false,
+  "files": [
+    {
+      "git_blob_oid": "496523ebf8a2f8179732701a82e626efb6977e8c",
+      "mode": "100644",
+      "path": ".github/workflows/aegis-ip-shield.yml",
+      "sha256": "6b128bd094d276f1cbe06adb086ac00a7489b6131663092ec8ffe077d54ac56b"
+    },
+    {
+      "git_blob_oid": "8cad93527d112da70fc747834b6dd99c58480714",
+      "mode": "100644",
+      "path": "README.md",
+      "sha256": "4e22d01b741ac6a9a57e03c7f70edcff8375aca61c94727d922250ce487c41ff"
+    },
+    {
+      "git_blob_oid": "388bd0b368fe13fee2faf95bca71b77f4ec8d3ae",
+      "mode": "100644",
+      "path": "docs/IP_SHIELD_GITHUB.md",
+      "sha256": "3ec29db7ad1cad94930399e26b32b7921e113253444c0e0c80bb0617e5504c1e"
+    },
+    {
+      "git_blob_oid": "dd56d940d4ffe2fffd25ad1142322461276639c6",
+      "mode": "100644",
+      "path": "kivi/Kivi.py",
+      "sha256": "1fa91ba5f2d299c85affb8ed42b9236a448f08bc4d01800b3bb3a26faa3b9d10"
+    },
+    {
+      "git_blob_oid": "3780ae87946357aece1d432a98261486577c8951",
+      "mode": "100644",
+      "path": "kivi/PyWhatKit_DB.txt",
+      "sha256": "6e7ee2fa306e2a58d36805e0c5bdd04a4bb46259fc8c8af2e734418ba42fa4a2"
+    },
+    {
+      "git_blob_oid": "fc6529a0f849d96c01e257d34833e7473d850c06",
+      "mode": "100644",
+      "path": "kivi/__pycache__/Kivi.cpython-310.pyc",
+      "sha256": "7219867d181b272137c305705692dde06f72a5a22a445c82a789572c68843347"
+    },
+    {
+      "git_blob_oid": "41fa757ba4610f1ee841bcf40b630fcb42a03ebc",
+      "mode": "100644",
+      "path": "kivi/__pycache__/backupdate.cpython-310.pyc",
+      "sha256": "6358bdc5401ba88027f9e00d9a2cdf46e0737c45a5126bbc347eb03cf2fbf97b"
+    },
+    {
+      "git_blob_oid": "209c1a876b627100ab947df513ad205409817475",
+      "mode": "100644",
+      "path": "kivi/__pycache__/email.cpython-310.pyc",
+      "sha256": "a3438d92f58d3ad4b045da23f0539351f46e64a0b267fedf11ab1e1df2e41f2c"
+    },
+    {
+      "git_blob_oid": "4a11637fed212ce299ac6edfd0ffd770bbc0c3b7",
+      "mode": "100644",
+      "path": "kivi/__pycache__/fillform.cpython-310.pyc",
+      "sha256": "349951331397b0d31cf7d52039a3be4ae3ee4ff1aa0768a129a71d8bdcf112ca"
+    },
+    {
+      "git_blob_oid": "de2e41355c9499102c88cd5607244c0a94e33e7f",
+      "mode": "100644",
+      "path": "kivi/__pycache__/project.cpython-310.pyc",
+      "sha256": "9b28dfc24292d5b3e3e936e8bb37a0fefecbfd3f9aef4b8b037a62a619794973"
+    },
+    {
+      "git_blob_oid": "03599446cd4a67c8abd9f09dad3e15556b86b99a",
+      "mode": "100644",
+      "path": "kivi/__pycache__/whatsapp.cpython-310.pyc",
+      "sha256": "d6ce20d94eda4225813927327c29f4b07775e6d298452df883139ec496e7e23b"
+    },
+    {
+      "git_blob_oid": "1a68a7e6a5cb1307d9b031df9af4c402018ea103",
+      "mode": "100644",
+      "path": "kivi/backupdate.py",
+      "sha256": "580460b0a3d923c9b512b915da641d40e6faa2169b6594f8da14a937520c71fa"
+    },
+    {
+      "git_blob_oid": "150cb8688b6f1e227688462b8518de9854c67810",
+      "mode": "100644",
+      "path": "kivi/batu login.py",
+      "sha256": "80ab6eccc30f6b4b78f6a957878d7bffeb214eb46adae4ccd4475075a9bb3bc8"
+    },
+    {
+      "git_blob_oid": "019fdcf30974d2ee234d43ec3f65eb5d586d44bd",
+      "mode": "100644",
+      "path": "kivi/fillform.py",
+      "sha256": "831c3212815c5236503706591f5a78dce922002ef5d8c66c5ffbc6b432b647e9"
+    },
+    {
+      "git_blob_oid": "ce018dd484fb62eb3f702788805d53b31db79ad4",
+      "mode": "100644",
+      "path": "kivi/import pyttsx3.py",
+      "sha256": "c8708f0ec85c5f1e54c652d97c530b84e287cca76633b15cd2477f18ababce49"
+    },
+    {
+      "git_blob_oid": "5348ebc1edda2290a972d9b6e9dfc2f41f7d753d",
+      "mode": "100644",
+      "path": "kivi/project.py",
+      "sha256": "5bc5b24d681e03dc06cd51361d4b410993f26001bfc8a6a220e3805821c5dec4"
+    },
+    {
+      "git_blob_oid": "87004c3f8a6c79d4c80476e6d0e828ccb6cae49f",
+      "mode": "100644",
+      "path": "kivi/whatsapp.py",
+      "sha256": "15613f677898105355307c4d5feaf94c25095c34958e62b51936302406451dc6"
+    }
+  ],
+  "generated_at_utc_runner_clock": "2026-11-13T19:05:58.845776+00:00",
+  "limits": [
+    "Git author and timestamp fields are declared metadata, not verified identity or trusted time.",
+    "Hashes identify recorded bytes; they do not prove authorship, originality, ownership or infringement.",
+    "The report contains paths and hashes, not source-file contents.",
+    "The runner clock is not a trusted timestamp authority.",
+    "Third-party and joint contributions retain applicable rights and licenses.",
+    "The ledger branch is versioned evidence, not immutable storage.",
+    "Only this repository and triggered refs are covered."
+  ],
+  "manifest_type": "AEGIS_GITHUB_IP_SHIELD_PROVENANCE",
+  "manifest_version": "1.0",
+  "ref": "refs/heads/main",
+  "ref_name": "main",
+  "repository": "irstabyjorge/python-project",
+  "tree": "b1c3ed3d2728e6a43cd152e124ae0c7c2632c84b",
+  "workflow_run_attempt": "1",
+  "workflow_run_id": "43487901409"
+}
